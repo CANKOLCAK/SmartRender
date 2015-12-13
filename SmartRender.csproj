@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9053CB9-4BDB-4F2A-93D9-83E911ED834E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartRender</RootNamespace>
+    <AssemblyName>SmartRender</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ok.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capture.Designer.cs">
+      <DependentUpon>Capture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectivePicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollectivePicture.Designer.cs">
+      <DependentUpon>CollectivePicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PurpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\PurpleButton.Designer.cs">
+      <DependentUpon>PurpleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SmartBallButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\SmartBallButton.Designer.cs">
+      <DependentUpon>SmartBallButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SmartButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\SmartButton.Designer.cs">
+      <DependentUpon>SmartButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TabV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\TabV.Designer.cs">
+      <DependentUpon>TabV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Viewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadSet.Designer.cs">
+      <DependentUpon>LoadSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass\Audio.cs" />
+    <Compile Include="MainClass\Ayarlar.cs" />
+    <Compile Include="MainClass\CheckFiles.cs" />
+    <Compile Include="MainClass\Effekt.cs" />
+    <Compile Include="MainClass\Language.cs" />
+    <Compile Include="MainClass\Messages.cs" />
+    <Compile Include="MainClass\SendMessage.cs" />
+    <Compile Include="MainClass\Variables.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass\Actions.cs" />
+    <Compile Include="MainClass\Controllers.cs" />
+    <Compile Include="MainClass\Extansions.cs" />
+    <Compile Include="Media_Sign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Media_Sign.Designer.cs">
+      <DependentUpon>Media_Sign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutputSettings.Designer.cs">
+      <DependentUpon>OutputSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render\Video.cs" />
+    <Compile Include="SaveSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveSettings.Designer.cs">
+      <DependentUpon>SaveSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\Server.cs" />
+    <Compile Include="Simulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Simulator.Designer.cs">
+      <DependentUpon>Simulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmallPicture.Designer.cs">
+      <DependentUpon>SmallPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabView.Designer.cs">
+      <DependentUpon>TabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoBirlestir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoBirlestir.Designer.cs">
+      <DependentUpon>VideoBirlestir.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Capture.resx">
+      <DependentUpon>Capture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollectivePicture.resx">
+      <DependentUpon>CollectivePicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SmartButton.resx">
+      <DependentUpon>SmartButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\TabV.resx">
+      <DependentUpon>TabV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadSet.resx">
+      <DependentUpon>LoadSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Media_Sign.resx">
+      <DependentUpon>Media_Sign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputSettings.resx">
+      <DependentUpon>OutputSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveSettings.resx">
+      <DependentUpon>SaveSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Simulator.resx">
+      <DependentUpon>Simulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmallPicture.resx">
+      <DependentUpon>SmallPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabView.resx">
+      <DependentUpon>TabView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoBirlestir.resx">
+      <DependentUpon>VideoBirlestir.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="i12_cimgpsh_orig_95L_icon.ico" />
+    <Content Include="icon.ico" />
+    <Content Include="lg_eb7_icon.ico" />
+    <Content Include="ok.ico" />
+    <None Include="Resources\alarm.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
